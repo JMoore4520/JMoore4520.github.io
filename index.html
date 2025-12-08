@@ -1,8 +1,9 @@
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hot spots</title>
+    <title>Tour</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
@@ -16,44 +17,45 @@
 
 <div id="panorama"></div>
 <script>
-pannellum.viewer('panorama', {
-    "default":{
-        "firstScene": "baildonhill",
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "circle",
+        "author": "Matthew Petroff",
         "sceneFadeDuration": 1000
     },
 
     "scenes": {
-        "baildonhill": {
+        "circle": {
             "title": "Mason Circle",
             "hfov": 110,
             "pitch": -3,
             "yaw": 117,
             "type": "equirectangular",
-            "panorama": "/imgs/equi/DJI_20250630084020_0466_D.JPG",
+            "panorama": "/imgs/equi/brad.jpg",
             "hotSpots": [
                 {
                     "pitch": -2.1,
                     "yaw": 132.9,
                     "type": "scene",
-                    "text": "Bradford City Centre",
-                    "sceneId": "bradford"
+                    "text": "Spring House or Dairy",
+                    "sceneId": "house"
                 }
             ]
         },
 
-        "bradford": {
+        "house": {
             "title": "Spring House or Dairy",
             "hfov": 110,
             "yaw": 5,
             "type": "equirectangular",
-            "panorama": "/imgs/equi/brad.jpg",
+            "panorama": "/imgs/equi/DJI_20250630084020_0466_D.JPG,
             "hotSpots": [
                 {
                     "pitch": -0.6,
                     "yaw": 37.1,
                     "type": "scene",
-                    "text": "Baildon Hill",
-                    "sceneId": "baildonhill",
+                    "text": "Mason Circle",
+                    "sceneId": "circle",
                     "targetYaw": -23,
                     "targetPitch": 2
                 }
@@ -65,4 +67,3 @@ pannellum.viewer('panorama', {
 
 </body>
 </html>
-
